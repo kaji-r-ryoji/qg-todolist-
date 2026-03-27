@@ -1,0 +1,256 @@
+body {
+    background-color: black;
+}
+/* ==================== 导航栏样式 ==================== */
+
+/* 导航栏容器：透明背景 + 靠右对齐 */
+nav {
+    background: transparent;  /* 透明背景 */
+    text-align: right;        /* 内容靠右对齐 */
+    padding: 10px 20px;       /* 上下10px，左右20px内边距 */
+}
+
+/* 导航栏链接样式 */
+nav a {
+    color: #666;              /* 灰色文字 */
+    text-decoration: none;    /* 去掉下划线 */
+    margin-left: 15px;        /* 链接之间间距 */
+    font-size: 14px;          /* 字号 */
+}
+
+/* 链接悬停效果 */
+nav a:hover {
+    color: white;              /* 悬停变深 */
+}
+
+/* 导航栏文字（如语言切换） */
+nav span {
+    color: #666;
+    margin-left: 15px;
+    font-size: 14px;
+}
+/*图片h1，把字体设置不可见*/
+h1 {
+    text-align: center;
+    font-size: 0;
+}
+/* 输入区单独居中 */
+section.input-section {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    gap: 0;
+}
+/* 内容区域容器：section与输入框左对齐，aside在右侧 */
+.content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    width: 780px;
+    margin: 0 auto;
+}
+
+/* 待办列表区域 */
+section.todo-section {
+    background-color: rgb(61, 61, 61);
+    width: 600px;
+    margin: 0;
+    display: block;
+    border: #ccc 2px solid;
+    border-radius: 8px 8px 8px 8px;
+}
+.todo-toolbar {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border: #ccc 2px solid;
+    border-radius: 8px 8px 0 0;
+    height: 40px;
+}
+/*全部完成按钮*/
+.btn-complete-all {
+    height: 40px;
+    border-radius: 8px 0 0 8px;
+    border-left :none;
+    background-color: #1bc077;
+    color: white;
+    font-size: 14px;
+}
+.todo-hint {
+    color: white;
+    font-size: 14px;
+}
+
+/*输入框区域*/
+section input {
+    flex: 1;
+    height: 50px;
+    background-color: rgb(20, 20, 20);
+    padding: 0 20px;
+    border-radius:8px 0 0 8px ;/*左侧圆角*/
+    border-right:none ;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    caret-color: #666;
+    color: #fff;
+}
+.input_button {
+    background-color: #1bc077;
+    height: 54px;
+    padding: 0 35px;
+    font-size: 16px;
+    border:#ccc 2px solid;
+    border-left: none;
+    border-radius: 0 8px 8px 0;/*右侧圆角*/
+    cursor:pointer;
+    color:white;
+}
+.todo-list {
+    justify-content: center;
+    align-items: center;
+}
+.todo-card {
+    display: flex;
+    width: 500px;
+    height: 50px;
+    border: black 2px solid;
+    color: #ccc;
+    border-radius:  8px;
+    margin: 10px;
+    align-items: center;
+    padding: 0 10px;
+}
+
+/* 空状态提示样式 */
+.todo-card.empty-hint {
+    justify-content: center;
+    color: #888;
+    border-style: dashed;
+}
+
+.todo-card .todo-text {
+    flex: 1;
+    margin: 0 10px;
+}
+
+/* 已完成的待办事项：添加删除线 */
+.todo-card.completed .todo-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.btn-delete {
+    margin-left: auto;
+    /* 设置按钮尺寸 */
+    width: 24px;
+    height: 24px;
+    /* 隐藏默认按钮样式 */
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    /* 隐藏文字（×） */
+    font-size: 0;
+    /* 默认显示删除图标 - 请替换为你的删除图片路径 */
+    background-image: url('../图标/删除.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 回收站状态下的恢复图标 - 请替换为你的恢复图片路径 */
+.todo-card.recycle .btn-delete {
+    background-image: url('../图标/流程恢复.png');
+}
+
+/* 复选框容器 */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 复选框基础样式 */
+.round-checkbox {
+    /* 隐藏原生复选框外观 */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* 设置尺寸 */
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    /* 默认未选中状态 - 请替换为你的未选中图片路径 */
+    background-image: url('../图标/复选框-未选-copy.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+}
+
+/* 复选框选中状态 - 请替换为你的选中图片路径 */
+.round-checkbox:checked {
+    background-image: url('../图标/复选框-已选.png');
+}
+/* 功能侧边栏：在section右侧 */
+.sidebar{
+    width: 160px;
+    flex-shrink: 0;
+    background-color: rgb(61, 61, 61);
+    border:#ccc 2px solid;
+    border-radius: 8px 8px 8px 8px;
+}
+
+/* 展开/收起按钮样式 */
+.toggle-btn {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* 侧边栏菜单收起状态：只隐藏菜单，保留 header */
+.sidebar-menu.collapsed {
+    display: none;
+}
+
+/* 侧边栏收起状态 */
+/* 展开/收起按钮样式 */
+.toggle-btn {
+    cursor: pointer;
+    user-select: none;
+}
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    color: #ccc;
+    gap:6px;
+}
+
+.open-emoji {
+    display: flex;
+}
+.sidebar-menu {
+    list-style: none;
+    border-top: #ccc 2px solid;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    border-bottom: black 2px solid;
+    padding: 12px 0;
+    color: #ccc;
+    cursor:pointer ;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item.active {
+    color: #1bc077;
+}
