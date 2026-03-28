@@ -151,14 +151,14 @@ section input {
     cursor: pointer;
     /* 隐藏文字（×） */
     font-size: 0;
-    /* 默认显示删除图标 - 请替换为你的删除图片路径 */
+    /* 默认显示删除图标*/
     background-image: url('../图标/删除.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-/* 回收站状态下的恢复图标 - 请替换为你的恢复图片路径 */
+/* 回收站状态下的恢复图标  */
 .todo-card.recycle .btn-delete {
     background-image: url('../图标/流程恢复.png');
 }
@@ -182,7 +182,7 @@ section input {
     border: none;
     cursor: pointer;
     outline: none;
-    /* 默认未选中状态 - 请替换为你的未选中图片路径 */
+    /* 默认未选中状态 - */
     background-image: url('../图标/复选框-未选-copy.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -190,7 +190,7 @@ section input {
     background-color: transparent;
 }
 
-/* 复选框选中状态 - 请替换为你的选中图片路径 */
+/* 复选框选中状态  */
 .round-checkbox:checked {
     background-image: url('../图标/复选框-已选.png');
 }
